@@ -1,3 +1,7 @@
+2010-02-23  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/sqrtrem.c: Use CNST_LIMB.
+
 2010-02-07  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tune/tuneup.c (tune_redc): Set min_size and min_is_always when
