@@ -1,3 +1,7 @@
+2010-02-25  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/pa64/aors_n.asm: Fix support of the.0n ABI.
+
 2010-02-23  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/mod_1_3.c: Cast a switch index.
