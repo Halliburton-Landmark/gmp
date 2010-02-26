@@ -1,3 +1,7 @@
+2010-02-26  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/pa64/aors_n.asm: Fix typo in last change.
+
 2010-02-25  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tests/mpz/t-perfpow.c (check_random): Use mp_limb_t type for limb
