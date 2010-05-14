@@ -1,3 +1,7 @@
+2010-05-14  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/redc_2.c: Use asm code just for GNU C.
+
 2010-02-26  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/pa64/aors_n.asm: Fix typo in last change.
