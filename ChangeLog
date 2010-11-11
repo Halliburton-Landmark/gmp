@@ -1,3 +1,8 @@
+2010-11-11  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/atom/aors_n.asm: Don't rely on ZF after 'bt' insn.
+	Use 64-bit 'test' to support operands of 2^32 limbs and more.
+
 2010-11-06  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86_64/aors_n.asm: Rewrite not to rely on ZF after 'bt' insn.
