@@ -1,3 +1,7 @@
+2011-03-15 Marco Bodrato <bodrato@mail.dm.unipi.it>
+
+	* mpn/generic/toom_interpolate_16pts.c: Remove ambiguity.
+
 2011-01-25 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* mpz/mul.c: Remove redundant size computation.
