@@ -1,3 +1,8 @@
+2011-03-21  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (hppa): Under linux, treat 64-bit processors as if they
+	were 32-bit processors.
+
 2011-01-25 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* mpz/mul.c: Remove redundant size computation.
@@ -3713,7 +3718,6 @@
 	* mpn/powerpc64/darwin.m4 (LEAL): New name for LEA, since it is only
 	usable for local symbols.
 	(LEA): Replace with code for external references.
-
 
 	* mpn/powerpc32/vmx/mod_34lsub1.asm: Use LEAL.
 
