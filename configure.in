@@ -656,6 +656,7 @@ case $host in
           # systems (GNU/Linux for instance), but lets assume they're ok.
           case $host in
             [*-*-hpux[1-9] | *-*-hpux[1-9].* | *-*-hpux10 | *-*-hpux10.*]) ;;
+	    [*-*-linux*])  abilist="1.0" ;; # due to linux permanent kernel bug
             *)    abilist="2.0w $abilist" ;;
           esac
 
@@ -957,6 +958,20 @@ case $host in
 	  *)            xlc_cflags_arch="-qarch=ppc" ;;
         esac
         ;;
+    esac
+
+    case $host in
+      *-*-aix*)
+	cclist="gcc xlc cc"
+	gcc_32_cflags_maybe="-maix32"
+	xlc_cflags="-O2 -qmaxmem=20000"
+	xlc_cflags_optlist="arch"
+	xlc_32_cflags_maybe="-q32"
+	cc_cflags="-O2 -qmaxmem=20000"
+	cc_cflags_optlist="arch"
+	cc_32_cflags_maybe="-q32"
+	ar_32_flags="-X32"
+	nm_32_flags="-X32"
     esac
 
     case $host in
