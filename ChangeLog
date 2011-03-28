@@ -1,3 +1,8 @@
+2011-03-28  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86/invert_limb.asm: Protect movzwl register parameters from
+	being interpreted as m4 macro parameters.
+
 2011-03-21  Torbjorn Granlund  <tege@gmplib.org>
 
 	* configure.in (hppa): Under linux, treat 64-bit processors as if they
