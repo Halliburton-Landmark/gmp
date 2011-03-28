@@ -1330,7 +1330,7 @@ This is the basic 32-bit PowerPC ABI, with a 32-bit limb.  No special compiler
 options are needed for applications.
 @end table
 
-GMP speed is greatest in @samp{aix64} and @samp{mode32}.  In @samp{ABI=32}
+GMP speed is greatest in @samp{aix64} and @samp{mode64}.  In @samp{ABI=32}
 only the 32-bit ISA is used and this doesn't make full use of a 64-bit chip.
 On a suitable system we could perhaps use more of the ISA, but there are no
 plans to do so.
