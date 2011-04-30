@@ -1,3 +1,10 @@
+2011-04-30  Marc Glisse  <marc.glisse@inria.fr>
+
+	* gmp-h.in (mpz_cdiv_q_2exp): Use mp_bitcnt_t to match the definition
+	and the documentation.
+	(mpz_remove): Likewise.
+	(mpf_eq): Likewise.
+
 2011-04-27  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tune/speed.h (speed_cyclecounter): Always use PIC variant when
@@ -25,6 +32,11 @@
 2011-03-12  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tune/powerpc.asm: Use powerpc syntax, not power syntax.
+
+2011-03-09  Marc Glisse  <marc.glisse@inria.fr>
+
+	* doc/gmp.texi: Remove void return type from constructors. Document
+	explicit constructors. Document mpf_class::mpf_class(mpf_t).
 
 2011-02-04  Torbjorn Granlund  <tege@gmplib.org>
 
