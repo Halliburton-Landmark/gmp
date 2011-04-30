@@ -1322,15 +1322,15 @@ gcc  -m64
 @cindex AIX
 The @samp{mode32} ABI uses a 64-bit @code{long long} limb but with the chip
 still in 32-bit mode and using 32-bit calling conventions.  This is the default
-on for systems where the true 64-bit ABIs are unavailable.  No special compiler
-options are needed for applications.
+for systems where the true 64-bit ABI is unavailable.  No special compiler
+options are typically needed for applications.
 
 @item @samp{ABI=32}
 This is the basic 32-bit PowerPC ABI, with a 32-bit limb.  No special compiler
 options are needed for applications.
 @end table
 
-GMP speed is greatest in @samp{aix64} and @samp{mode64}.  In @samp{ABI=32}
+GMP's speed is greatest for @samp{aix64} and @samp{mode64}.  In @samp{ABI=32}
 only the 32-bit ISA is used and this doesn't make full use of a 64-bit chip.
 On a suitable system we could perhaps use more of the ISA, but there are no
 plans to do so.
@@ -1622,10 +1622,10 @@ that the GCC default @samp{-mapp-regs} does (@pxref{SPARC Options,, SPARC
 Options, gcc, Using the GNU Compiler Collection (GCC)}).
 
 This makes that code unsuitable for use with the special V9
-@samp{-mcmodel=embmedany} (which uses @code{g4} as a data segment pointer),
-and for applications wanting to use those registers for special purposes.  In
-these cases the only suggestion currently is to build GMP with CPU @samp{none}
-to avoid the assembly code.
+@samp{-mcmodel=embmedany} (which uses @code{g4} as a data segment pointer), and
+for applications wanting to use those registers for special purposes.  In these
+cases the only suggestion currently is to build GMP with CPU @samp{none} to
+avoid the assembly code.
 
 @item SunOS 4
 @cindex SunOS
@@ -3811,13 +3811,15 @@ Test bit @var{bit_index} in @var{op} and return 0 or 1 accordingly.
 @cindex I/O functions
 
 Functions that perform input from a stdio stream, and functions that output to
-a stdio stream.  Passing a @code{NULL} pointer for a @var{stream} argument to any of
-these functions will make them read from @code{stdin} and write to
-@code{stdout}, respectively.
+a stdio stream, of @code{mpz} numbers.  Passing a @code{NULL} pointer for a
+@var{stream} argument to any of these functions will make them read from
+@code{stdin} and write to @code{stdout}, respectively.
 
 When using any of these functions, it is a good idea to include @file{stdio.h}
 before @file{gmp.h}, since that will allow @file{gmp.h} to define prototypes
 for these functions.
+
+See also @ref{Formatted Output} and @ref{Formatted Input}.
 
 @deftypefun size_t mpz_out_str (FILE *@var{stream}, int @var{base}, mpz_t @var{op})
 Output @var{op} on stdio stream @var{stream}, as a string of digits in base
@@ -4434,13 +4436,16 @@ recommended instead of these functions.
 @cindex Output functions
 @cindex I/O functions
 
-When using any of these functions, it's a good idea to include @file{stdio.h}
+Functions that perform input from a stdio stream, and functions that output to
+a stdio stream, of @code{mpq} numbers.  Passing a @code{NULL} pointer for a
+@var{stream} argument to any of these functions will make them read from
+@code{stdin} and write to @code{stdout}, respectively.
+
+When using any of these functions, it is a good idea to include @file{stdio.h}
 before @file{gmp.h}, since that will allow @file{gmp.h} to define prototypes
 for these functions.
 
-Passing a @code{NULL} pointer for a @var{stream} argument to any of these
-functions will make them read from @code{stdin} and write to @code{stdout},
-respectively.
+See also @ref{Formatted Output} and @ref{Formatted Input}.
 
 @deftypefun size_t mpq_out_str (FILE *@var{stream}, int @var{base}, mpq_t @var{op})
 Output @var{op} on stdio stream @var{stream}, as a string of digits in base
@@ -4935,13 +4940,15 @@ multiple times.
 @cindex I/O functions
 
 Functions that perform input from a stdio stream, and functions that output to
-a stdio stream.  Passing a @code{NULL} pointer for a @var{stream} argument to
-any of these functions will make them read from @code{stdin} and write to
-@code{stdout}, respectively.
+a stdio stream, of @code{mpf} numbers.  Passing a @code{NULL} pointer for a
+@var{stream} argument to any of these functions will make them read from
+@code{stdin} and write to @code{stdout}, respectively.
 
 When using any of these functions, it is a good idea to include @file{stdio.h}
 before @file{gmp.h}, since that will allow @file{gmp.h} to define prototypes
 for these functions.
+
+See also @ref{Formatted Output} and @ref{Formatted Input}.
 
 @deftypefun size_t mpf_out_str (FILE *@var{stream}, int @var{base}, size_t @var{n_digits}, mpf_t @var{op})
 Print @var{op} to @var{stream}, as a string of digits.  Return the number of
@@ -5323,7 +5330,7 @@ be 0, 1 or 2 (these are both borrows really).  When @math{c=0} clearly
 @code{mp_bits_per_limb} is even, which is always so currently).
 @end deftypefn
 
-@deftypefun mp_limb_t mpn_mod_1 (mp_limb_t *@var{s1p}, mp_size_t @var{s1n}, mp_limb_t @var{s2limb})
+@deftypefun mp_limb_t mpn_mod_1 (const mp_limb_t *@var{s1p}, mp_size_t @var{s1n}, mp_limb_t @var{s2limb})
 Divide @{@var{s1p}, @var{s1n}@} by @var{s2limb}, and return the remainder.
 @var{s1n} can be zero.
 @end deftypefun
@@ -5494,6 +5501,8 @@ different bit values.
 
 @deftypefun int mpn_perfect_square_p (const mp_limb_t *@var{s1p}, mp_size_t @var{n})
 Return non-zero iff @{@var{s1p}, @var{n}@} is a perfect square.
+The most significant limb of the input @{@var{s1p}, @var{n}@} must be
+non-zero.
 @end deftypefun
 
 @deftypefun void mpn_and_n (mp_limb_t *@var{rp}, const mp_limb_t *@var{s1p}, const mp_limb_t *@var{s2p}, mp_size_t @var{n})
@@ -7216,6 +7225,12 @@ NTL @spaceuref{http://www.shoup.net/ntl/} @* A C++ number theory library.
 @c gmp-d @spaceuref{http://home.comcast.net/~benhinkle/gmp-d/}
 @c @end itemize
 
+@item Eiffel
+@itemize @bullet
+@item
+Eiffelroom @spaceuref{http://www.eiffelroom.org/node/442}
+@end itemize
+
 @item Fortran
 @itemize @bullet
 @item
@@ -7320,9 +7335,13 @@ Arbitrary precision floats.
 @item Python
 @itemize @bullet
 @item
-mpz module in the standard distribution, @uref{http://www.python.org/}
+GMPY @uref{http://code.google.com/p/gmpy/}
+@end itemize
+
+@item Ruby
+@itemize @bullet
 @item
-GMPY @uref{http://gmpy.sourceforge.net/}
+http://rubygems.org/gems/gmp
 @end itemize
 
 @item Scheme
