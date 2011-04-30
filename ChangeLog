@@ -3,6 +3,11 @@
 	* tune/speed.h (speed_cyclecounter): Always use PIC variant when
 	compiled with Apple's GCC.
 
+2011-04-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	* acinclude.m4 (GMP_ASM_RODATA): Make 'foo' larger to avoid clang
+	problems.
+
 2011-03-28  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86/invert_limb.asm: Protect movzwl register parameters from
