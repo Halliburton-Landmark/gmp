@@ -1,3 +1,8 @@
+2011-04-27  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tune/speed.h (speed_cyclecounter): Always use PIC variant when
+	compiled with Apple's GCC.
+
 2011-03-28  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86/invert_limb.asm: Protect movzwl register parameters from
@@ -24,6 +29,11 @@
 2010-11-06  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86_64/aors_n.asm: Rewrite not to rely on ZF after 'bt' insn.
+
+2010-10-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/gcd_1.asm: Use m4_lshift to avoid << operator.
+	* mpn/x86/k7/gcd_1.asm: Likewise.
 
 2010-05-14  Torbjorn Granlund  <tege@gmplib.org>
 
