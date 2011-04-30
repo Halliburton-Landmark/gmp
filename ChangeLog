@@ -22,6 +22,15 @@
 
 	* mpn/generic/toom_interpolate_16pts.c: Remove ambiguity.
 
+2011-03-12  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tune/powerpc.asm: Use powerpc syntax, not power syntax.
+
+2011-02-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/core2/popcount.asm: Add a MULFUNC_PROLOGUE.
+	* mpn/x86_64/pentium4/popcount.asm: Likewise.
+
 2011-01-25 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* mpz/mul.c: Remove redundant size computation.
