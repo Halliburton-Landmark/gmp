@@ -5,6 +5,9 @@
 	(mpz_remove): Likewise.
 	(mpf_eq): Likewise.
 
+	* doc/gmp.texi (mpf_urandomb): Explicit the fact that it does not
+	change the precision.
+
 2011-04-27  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tune/speed.h (speed_cyclecounter): Always use PIC variant when
