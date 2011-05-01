@@ -41,6 +41,10 @@
 	* doc/gmp.texi: Remove void return type from constructors. Document
 	explicit constructors. Document mpf_class::mpf_class(mpf_t).
 
+2011-02-24  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86/p6/sse2/mod_1_4.asm: Fix typo in MULFUNC_PROLOGUE.
+
 2011-02-04  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86_64/core2/popcount.asm: Add a MULFUNC_PROLOGUE.
@@ -73,6 +77,17 @@
 	* mpn/x86/divrem_2.asm: Use "orb" instead of "or" to work around
 	Solaris assembler bug.
 	* mpn/x86_64/mpn/x86_64/divrem_2.asm: Likewise.
+
+2010-03-25  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/toom33_mul.c: Fix mpn_add_n_sub_n usage.
+	* mpn/generic/toom3_sqr.c: Likewise.
+	* mpn/generic/toom63_mul.c: Likewise.
+
+2010-03-19  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/toom_interpolate_6pts.c: Call mpn_sublsh2_n and
+	mpn_sublsh_n with correct args.
 
 2010-02-26  Torbjorn Granlund  <tege@gmplib.org>
 
