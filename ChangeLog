@@ -68,6 +68,13 @@
 	* mpn/x86_64/gcd_1.asm: Use m4_lshift to avoid << operator.
 	* mpn/x86/k7/gcd_1.asm: Likewise.
 
+2010-08-20  Niels Möller  <nisse@lysator.liu.se>
+
+	Suggested by Ozkan Sezer:
+	* configure.in: If $M4 is already set in the environment, don't
+	touch it. Fixed the case that no assembler files are used, and
+	GMP_PROG_M4 is omitted.
+
 2010-05-14  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/redc_2.c: Use asm code just for GNU C.
