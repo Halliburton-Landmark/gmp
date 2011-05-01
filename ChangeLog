@@ -75,6 +75,14 @@
 	touch it. Fixed the case that no assembler files are used, and
 	GMP_PROG_M4 is omitted.
 
+2010-05-24  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/mu_div_qr.c (mpn_preinv_mu_div_qr_itch): New function.
+	* gmp-impl.h: Declare it.
+	* tune/common.c (speed_mpn_mupi_div_qr): Use new itch function.
+	* tune/speed.h (SPEED_ROUTINE_MPN_MUPI_DIV_QR): Pass parameters right
+	for new itch function.
+
 2010-05-14  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/redc_2.c: Use asm code just for GNU C.
