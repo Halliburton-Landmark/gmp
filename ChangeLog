@@ -10,6 +10,9 @@
 	(mpz_remove): Likewise.
 	(mpf_eq): Likewise.
 
+	* ltmain.sh: Remove.
+	* .bootstrap: Let libtoolize generate ltmain.sh.
+
 	* doc/gmp.texi (mpf_urandomb): Explicit the fact that it does not
 	change the precision.
 
