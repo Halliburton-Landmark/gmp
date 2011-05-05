@@ -1,3 +1,8 @@
+2011-05-05  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/fat/fat_entry.asm: (PIC_OR_DARWIN): New symbol.  Use it to
+	work around Darwin problems.
+
 2011-05-02  Marc Glisse  <marc.glisse@inria.fr>
 
 	* configfsf.guess: Update to version of 2011-02-02.
