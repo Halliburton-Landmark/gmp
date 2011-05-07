@@ -1,3 +1,8 @@
+2011-05-07  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
+	Bump version info.
+
 2011-05-05  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86_64/fat/fat_entry.asm: (PIC_OR_DARWIN): New symbol.  Use it to
