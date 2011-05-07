@@ -2,6 +2,8 @@
 
 	* Version 5.0.2 released.
 
+	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
+
 	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
 	Bump version info.
 
