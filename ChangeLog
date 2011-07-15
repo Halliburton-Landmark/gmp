@@ -1,3 +1,8 @@
+2011-07-14  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/dcpi1_bdiv_q.c (mpn_dcpi1_bdiv_q): Get mpn_sub_1 size
+	argument right.
+
 2011-06-16  Torbjorn Granlund  <tege@gmplib.org>
 
 	* acinclude.m4 (GMP_ASM_RODATA): Fix typo in 2011-04-10 change.
