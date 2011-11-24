@@ -1,3 +1,16 @@
+2011-11-24  Torbjorn Granlund  <tege@gmplib.org>
+
+	* doc/gmp.texi (Formatted Output Strings): Clarify rules for mpf_t
+	precision.
+
+2011-11-21  Torbjorn Granlund  <tege@gmplib.org>
+
+	* gmp-h.in (__GNU_MP_RELEASE): Renamed from typo name.
+
+2011-10-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* doc/gmp.texi (Custom Allocation): Rephrase a paragraph.
+
 2011-07-14  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/dcpi1_bdiv_q.c (mpn_dcpi1_bdiv_q): Get mpn_sub_1 size
