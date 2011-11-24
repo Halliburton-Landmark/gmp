@@ -5938,7 +5938,10 @@ happens even for an @samp{f} conversion of an @code{mpf_t} which is an
 integer, for instance @math{2^@W{1024}} in an @code{mpf_t} of 128 bits
 precision will only produce about 40 digits, then pad with zeros to the
 decimal point.  An empty precision field like @samp{%.Fe} or @samp{%.Ff} can
-be used to specifically request just the significant digits.
+be used to specifically request just the significant digits.  Without any dot
+and thus no precision field, a precision value of 6 will be used.  Note that
+these rules mean that @samp{%Ff}, @samp{%.Ff}, and @samp{%.0Ff} will all be
+different.
 
 The decimal point character (or string) is taken from the current locale
 settings on systems which provide @code{localeconv} (@pxref{Locales,, Locales
