@@ -1,3 +1,15 @@
+2011-12-07  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in: Fix typo making HAVE_NATIVE_mpn_X fail for fat
+	functions.
+
+	* mpn/x86_64/fat/fat.c (__gmpn_cpuvec_init): Add a missing break.
+
+2011-11-25  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in: Overhaul x86/x86_64 support, merging three case
+	statements into one.
+
 2011-11-24  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi (Formatted Output Strings): Clarify rules for mpf_t
@@ -7,14 +19,33 @@
 
 	* gmp-h.in (__GNU_MP_RELEASE): Renamed from typo name.
 
+2011-11-20  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in: Split x86 CPUs into more subtypes for more accurate
+	passing of gcc flags.
+
 2011-10-04  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi (Custom Allocation): Rephrase a paragraph.
+
+2011-09-25  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in: Recognise sh3 and sh4.
 
 2011-07-14  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/dcpi1_bdiv_q.c (mpn_dcpi1_bdiv_q): Get mpn_sub_1 size
 	argument right.
+
+2011-07-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (x86_64 *-*-mingw*): Handle also cygwin here; clear out
+	extra_functions_64.
+
+2011-07-02  Torbjorn Granlund  <tege@gmplib.org>
+
+	* config.guess: Don't print newline in x86 cpuid function.
+	Rewrite x86-64 cpu recognition asm code to work under Windoze.
 
 2011-06-16  Torbjorn Granlund  <tege@gmplib.org>
 
@@ -30,6 +61,11 @@
 
 	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
 	Bump version info.
+
+2011-05-05  Marc Glisse  <marc.glisse@inria.fr>
+
+	* mpn/x86_64/fat/fat.c: Update for Sandy Bridge.
+	* config.guess: warning to keep it in sync with fat.c.
 
 2011-05-05  Torbjorn Granlund  <tege@gmplib.org>
 
@@ -54,6 +90,11 @@
 	* doc/gmp.texi (mpf_urandomb): Explicit the fact that it does not
 	change the precision.
 
+2011-04-28  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (x86_64): Support bobcat specifically.
+	(x86): Match bobcat and bulldozer, handle like k10.
+
 2011-04-27  Torbjorn Granlund  <tege@gmplib.org>
 
 	* tune/speed.h (speed_cyclecounter): Always use PIC variant when
@@ -63,6 +104,11 @@
 
 	* mpn/sparc32/sparc-defs.m4 (changecom): Don't redefine '!' as it
 	interferes with expressions.
+
+2011-04-10  Niels Möller  <nisse@lysator.liu.se>
+
+	* configure.in: Add invert_limb_table to extra_functions_64 on
+	x86_64.
 
 2011-04-10  Torbjorn Granlund  <tege@gmplib.org>
 
@@ -101,6 +147,14 @@
 	* mpn/x86_64/core2/popcount.asm: Add a MULFUNC_PROLOGUE.
 	* mpn/x86_64/pentium4/popcount.asm: Likewise.
 
+2011-01-31  Torbjorn Granlund  <tege@gmplib.org>
+
+	* config.guess: Recognise new Intel processors.
+
+	* config.guess: Support 'coreinhm' and 'coreisbr'.
+	* config.sub: Likewise.
+	* configure.in: Likewise.
+
 2011-01-25 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* mpz/mul.c: Remove redundant size computation.
@@ -109,6 +163,11 @@
 
 	* mpn/x86_64/atom/aors_n.asm: Don't rely on ZF after 'bt' insn.
 	Use 64-bit 'test' to support operands of 2^32 limbs and more.
+
+2010-11-09  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (AC_INIT): Amend bug reporting address with manual
+	reference.
 
 2010-11-06  Torbjorn Granlund  <tege@gmplib.org>
 
