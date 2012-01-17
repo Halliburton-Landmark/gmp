@@ -7,7 +7,15 @@
 	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
 	Bump version info.
 
+	* configure.in: Add ultrasparc T4 support.
+
 	* demos/isprime.c (main): Run 25 millerrabin tests.
+
+2012-01-15  Niels Möller  <nisse@lysator.liu.se>
+
+	* mpz/scan0.c (mpz_scan0): Use ~(mp_bitcnt_t) 0, rather than
+	ULONG_MAX, when returning "infinity".
+	* mpz/scan1.c (mpz_scan1): Likewise.
 
 2011-12-30  Torbjorn Granlund  <tege@gmplib.org>
 
