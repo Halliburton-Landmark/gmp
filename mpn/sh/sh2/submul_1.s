@@ -1,7 +1,7 @@
 ! SH2 __gmpn_submul_1 -- Multiply a limb vector with a limb and subtract
 ! the result from a second limb vector.
 
-! Copyright 1995, 2000 Free Software Foundation, Inc.
+! Copyright 1995, 2000, 2011 Free Software Foundation, Inc.
 
 ! This file is part of the GNU MP Library.
 
@@ -40,10 +40,10 @@ Loop:	mov.l	@r5+,r3
 	sts	mach,r2		! new cy_limb = hi_prod
 	mov.l	@r4,r3
 	addc	r0,r2		! cy_limb += T, T = 0
-	subc	r3,r1
+	subc	r1,r3
 	addc	r0,r2		! cy_limb += T, T = 0
 	dt	r6
-	mov.l	r1,@r4
+	mov.l	r3,@r4
 	bf.s	Loop
 	add	#4,r4
 

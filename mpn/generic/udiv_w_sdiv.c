@@ -116,12 +116,12 @@ mpn_udiv_w_sdiv (rp, a1, a0, d)
 	{				/* Hence a1 = d - 1 = 2*b1 - 1 */
 	  if (a0 >= -d)
 	    {
-	      q = -1;
+	      q = -CNST_LIMB(1);
 	      r = a0 + d;
 	    }
 	  else
 	    {
-	      q = -2;
+	      q = -CNST_LIMB(2);
 	      r = a0 + 2*d;
 	    }
 	}

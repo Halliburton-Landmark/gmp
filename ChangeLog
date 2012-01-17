@@ -9,6 +9,16 @@
 
 	* mpn/x86_64/fat/fat.c (__gmpn_cpuvec_init): Add a missing break.
 
+2011-12-01  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/x86_64/fat/fat.c: Copy fake cpuid code from x86/fat/fat.c.
+
+	* gmp-impl.h (DECL_divexact_1): Fix typo in return type.
+
+2011-11-28  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/udiv_w_sdiv.c: Use CNST_LIMB for some constants.
+
 2011-11-25  Torbjorn Granlund  <tege@gmplib.org>
 
 	* configure.in: Overhaul x86/x86_64 support, merging three case
@@ -37,13 +47,45 @@
 	* mpn/generic/powm_sec.c (mpn_powm_sec): Use mpn_tabselect also in
 	initialisation.
 
+2011-10-14  Torbjorn Granlund  <tege@gmplib.org>
+
+	From Per Olofsson:
+	* mpn/generic/popham.c: Add __GMP_NOTHROW to make it match gmp.h.
+
+2011-10-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	From Marco Trudel:
+	* tests/mpz/t-scan.c (check_ref): Fix loop end bound.
+
 2011-10-04  Torbjorn Granlund  <tege@gmplib.org>
 
 	* doc/gmp.texi (Custom Allocation): Rephrase a paragraph.
 
+	* demos/factorize.c: Run 25 Miller-Rabin tests.
+
+	* mpz/nextprime.c: Run 25 mpz_millerrabin tests (was 10).
+
+2011-09-26  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/sh/sh2/submul_1.s: Make this old submul_1 implementation
+	actually compute intended function.
+
 2011-09-25  Torbjorn Granlund  <tege@gmplib.org>
 
 	* configure.in: Recognise sh3 and sh4.
+
+2011-08-18  Torbjorn Granlund  <tege@gmplib.org>
+
+	* printf/doprntf.c (__gmp_doprnt_mpf): For DOPRNT_CONV_FIXED, ask for
+	one more digit.
+
+2011-08-17  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpf/sub.c: Fix typo in copy condition.  Delay an allocation.
+
+2011-08-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tests/rand/t-lc2exp.c (check_bigc): Call abort after reporting error.
 
 2011-07-14  Torbjorn Granlund  <tege@gmplib.org>
 
