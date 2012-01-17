@@ -1,8 +1,30 @@
 Copyright 1996, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-2009, 2010, 2011 Free Software Foundation, Inc.
+2009, 2010, 2011, 2012 Free Software Foundation, Inc.
 
 Verbatim copying and distribution of this entire article is permitted
 in any medium, provided this notice is preserved.
+
+
+Changes between GMP version 5.0.2 and 5.0.3
+
+  BUGS FIXED
+  * A few minor bugs related to portability fixed.
+
+  * A slight leak of the powm_sec functions have been sealed.  (This
+    leak could possibly be used to extract the most significant few
+    bits of the exponent.  "Few" here means at most 10.)
+
+  * The mpz_nextprime function now runs a safer number of pseudo-random prime
+    tests.
+
+  SPEEDUPS
+  * None, except indirectly through recognition of new CPUs.
+
+  FEATURES
+  * New CPUs recognised.
+
+  MISC
+  * None.
 
 
 Changes between GMP version 5.0.1 and 5.0.2
