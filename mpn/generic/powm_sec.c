@@ -7,7 +7,7 @@
    SAFE TO REACH THEM THROUGH DOCUMENTED INTERFACES.  IN FACT, IT IS ALMOST
    GUARANTEED THAT THEY WILL CHANGE OR DISAPPEAR IN A FUTURE GNU MP RELEASE.
 
-Copyright 2007, 2008, 2009 Free Software Foundation, Inc.
+Copyright 2007, 2008, 2009, 2011 Free Software Foundation, Inc.
 
 This file is part of the GNU MP Library.
 
@@ -125,8 +125,6 @@ mpn_local_sqr (mp_ptr rp, mp_srcptr up, mp_size_t n, mp_ptr tp)
   if (n > 1)
     {
       mp_limb_t cy;
-      TMP_DECL;
-      TMP_MARK;
 
       cy = mpn_mul_1 (tp, up + 1, n - 1, up[0]);
       tp[n - 1] = cy;
@@ -148,8 +146,6 @@ mpn_local_sqr (mp_ptr rp, mp_srcptr up, mp_size_t n, mp_ptr tp)
 #endif
 	rp[2 * n - 1] += cy;
       }
-
-      TMP_FREE;
     }
 }
 #endif
@@ -196,15 +192,12 @@ static void
 redcify (mp_ptr rp, mp_srcptr up, mp_size_t un, mp_srcptr mp, mp_size_t n, mp_ptr tp)
 {
   mp_ptr qp;
-  TMP_DECL;
-  TMP_MARK;
 
   qp = tp + un + n;
 
   MPN_ZERO (tp, n);
   MPN_COPY (tp + n, up, un);
   mpn_tdiv_qr (qp, rp, 0L, tp, un + n, mp, n);
-  TMP_FREE;
 }
 
 /* rp[n-1..0] = bp[bn-1..0] ^ ep[en-1..0] mod mp[n-1..0]
@@ -224,12 +217,9 @@ mpn_powm_sec (mp_ptr rp, mp_srcptr bp, mp_size_t bn,
   mp_ptr pp, this_pp;
   long i;
   int cnd;
-  TMP_DECL;
 
   ASSERT (en > 1 || (en == 1 && ep[0] > 0));
   ASSERT (n >= 1 && ((mp[0] & 1) != 0));
-
-  TMP_MARK;
 
   count_leading_zeros (cnt, ep[en - 1]);
   ebi = (mp_bitcnt_t) en * GMP_LIMB_BITS - cnt;
@@ -261,7 +251,11 @@ mpn_powm_sec (mp_ptr rp, mp_srcptr bp, mp_size_t bn,
   else
     ebi -= windowsize;
 
+#if WANT_CACHE_SECURITY
+  mpn_tabselect (rp, pp, n, 1 << windowsize, expbits);
+#else
   MPN_COPY (rp, pp + n * expbits, n);
+#endif
 
   while (ebi != 0)
     {
@@ -297,7 +291,6 @@ mpn_powm_sec (mp_ptr rp, mp_srcptr bp, mp_size_t bn,
   mpn_redc_1_sec (rp, tp, mp, n, minv);
   cnd = mpn_sub_n (tp, rp, mp, n);	/* we need just retval */
   mpn_subcnd_n (rp, rp, mp, n, !cnd);
-  TMP_FREE;
 }
 
 #if ! HAVE_NATIVE_mpn_tabselect

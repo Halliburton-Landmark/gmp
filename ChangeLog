@@ -1,3 +1,7 @@
+2011-12-30  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpz/hamdist.c: Fix typo in a return statement.
+
 2011-12-07  Torbjorn Granlund  <tege@gmplib.org>
 
 	* configure.in: Fix typo making HAVE_NATIVE_mpn_X fail for fat
@@ -23,6 +27,15 @@
 
 	* configure.in: Split x86 CPUs into more subtypes for more accurate
 	passing of gcc flags.
+
+2011-11-15  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/powm_sec.c (mpn_local_sqr): Remove forgotten TMP_* calls.
+	(redcify): Likewise.
+	(mpn_powm_sec): Likewise.
+
+	* mpn/generic/powm_sec.c (mpn_powm_sec): Use mpn_tabselect also in
+	initialisation.
 
 2011-10-04  Torbjorn Granlund  <tege@gmplib.org>
 
@@ -163,6 +176,42 @@
 
 	* mpn/x86_64/atom/aors_n.asm: Don't rely on ZF after 'bt' insn.
 	Use 64-bit 'test' to support operands of 2^32 limbs and more.
+
+2010-11-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mp_get_fns.c: Add a __GMP_NOTHROW for coherency with prototype.
+	* mp_set_fns.c: Likewise.
+	* mpf/cmp.c: Likewise.
+	* mpf/cmp_si.c: Likewise.
+	* mpf/cmp_ui.c: Likewise.
+	* mpf/fits_s.h: Likewise.
+	* mpf/fits_u.h: Likewise.
+	* mpf/get_dfl_prec.c: Likewise.
+	* mpf/get_prc.c: Likewise.
+	* mpf/get_si.c: Likewise.
+	* mpf/get_ui.c: Likewise.
+	* mpf/int_p.c: Likewise.
+	* mpf/set_dfl_prec.c: Likewise.
+	* mpf/set_prc_raw.c: Likewise.
+	* mpf/size.c: Likewise.
+	* mpf/swap.c: Likewise.
+	* mpq/equal.c: Likewise.
+	* mpq/swap.c: Likewise.
+	* mpz/cmp.c: Likewise.
+	* mpz/cmp_si.c: Likewise.
+	* mpz/cmp_ui.c: Likewise.
+	* mpz/cmpabs.c: Likewise.
+	* mpz/cmpabs_ui.c: Likewise.
+	* mpz/cong_2exp.c: Likewise.
+	* mpz/divis_2exp.c: Likewise.
+	* mpz/fits_s.h: Likewise.
+	* mpz/get_si.c: Likewise.
+	* mpz/hamdist.c: Likewise.
+	* mpz/scan0.c: Likewise.
+	* mpz/scan1.c: Likewise.
+	* mpz/sizeinbase.c: Likewise.
+	* mpz/swap.c: Likewise.
+	* mpz/tstbit.c: Likewise.
 
 2010-11-09  Torbjorn Granlund  <tege@gmplib.org>
 
