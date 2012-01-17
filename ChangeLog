@@ -1,3 +1,14 @@
+2012-01-17  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Version 5.0.3 released.
+
+	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
+
+	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
+	Bump version info.
+
+	* demos/isprime.c (main): Run 25 millerrabin tests.
+
 2011-12-30  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpz/hamdist.c: Fix typo in a return statement.
@@ -119,6 +130,9 @@
 
 2011-05-05  Marc Glisse  <marc.glisse@inria.fr>
 
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
+
 	* mpn/x86_64/fat/fat.c: Update for Sandy Bridge.
 	* config.guess: warning to keep it in sync with fat.c.
 
@@ -147,6 +161,9 @@
 
 2011-04-28  Torbjorn Granlund  <tege@gmplib.org>
 
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
+
 	* configure.in (x86_64): Support bobcat specifically.
 	(x86): Match bobcat and bulldozer, handle like k10.
 
@@ -161,6 +178,9 @@
 	interferes with expressions.
 
 2011-04-10  Niels Möller  <nisse@lysator.liu.se>
+
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
 
 	* configure.in: Add invert_limb_table to extra_functions_64 on
 	x86_64.
@@ -204,6 +224,9 @@
 
 2011-01-31  Torbjorn Granlund  <tege@gmplib.org>
 
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
+
 	* config.guess: Recognise new Intel processors.
 
 	* config.guess: Support 'coreinhm' and 'coreisbr'.
@@ -220,6 +243,9 @@
 	Use 64-bit 'test' to support operands of 2^32 limbs and more.
 
 2010-11-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
 
 	* mp_get_fns.c: Add a __GMP_NOTHROW for coherency with prototype.
 	* mp_set_fns.c: Likewise.
@@ -256,6 +282,9 @@
 	* mpz/tstbit.c: Likewise.
 
 2010-11-09  Torbjorn Granlund  <tege@gmplib.org>
+
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
 
 	* configure.in (AC_INIT): Amend bug reporting address with manual
 	reference.
