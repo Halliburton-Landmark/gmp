@@ -131,6 +131,11 @@
 
 	* configure.in: Surround tr ranges with [] for portability.
 
+2011-05-08  Marc Glisse  <marc.glisse@inria.fr>
+
+	* doc/gmp.texi (gmp_randclass::get_f): Replace unsigned long
+	with mp_bitcnt_t.
+
 2011-05-07  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.2 released.
