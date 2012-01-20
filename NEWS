@@ -14,8 +14,11 @@ Changes between GMP version 5.0.2 and 5.0.3
     leak could possibly be used to extract the most significant few
     bits of the exponent.  "Few" here means at most 10.)
 
-  * The mpz_nextprime function now runs a safer number of pseudo-random prime
-    tests.
+  * The mpz_nextprime function now runs a safer number of
+    pseudo-random prime tests.
+
+  * A small bug in division code possibly causing incorrect
+    computation was fixed.
 
   SPEEDUPS
   * None, except indirectly through recognition of new CPUs.
