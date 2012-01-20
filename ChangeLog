@@ -25,6 +25,10 @@
 
 	* mpz/hamdist.c: Fix typo in a return statement.
 
+2011-12-08  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/generic/powm_sec.c: Handle fat binaries better.
+
 2011-12-07  Torbjorn Granlund  <tege@gmplib.org>
 
 	* configure.in: Fix typo making HAVE_NATIVE_mpn_X fail for fat
