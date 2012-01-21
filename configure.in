@@ -863,7 +863,7 @@ case $host in
     abilist="32"
     cclist="gcc cc"
     cc_cflags="-O2"
-    gcc_cflags="$gcc_cflags -mpowerpc"
+    gcc_32_cflags="$gcc_cflags -mpowerpc"
     gcc_cflags_optlist="precomp subtype asm cpu"
     gcc_cflags_precomp="-no-cpp-precomp"
     gcc_cflags_subtype="-force_cpusubtype_ALL"	# for vmx on darwin
@@ -886,19 +886,6 @@ case $host in
         path="powerpc32" ;;
     esac
 
-    # gcc 2.7.2 knows -mcpu=403, 601, 603, 604.
-    # gcc 2.95 adds 401, 505, 602, 603e, ec603e, 604e, 620, 740, 750,
-    #   801, 821, 823, 860.
-    # gcc 3.0 adds 630, rs64a.
-    # gcc 3.1 adds 405, 7400, 7450.
-    # gcc 3.2 adds nothing.
-    # gcc 3.3 adds power3, power4, 8540.  power3 seems to be a synonym for 630.
-    # gcc pre-release 3.4 adds 405fp, 440, 440fp, 970.
-    #
-    # FIXME: The way 603e falls back to 603 for gcc 2.7.2 should be
-    # done for all the others too.  But what would be the correct
-    # arrangements?
-    #
     case $host_cpu in
       powerpc401)   gcc_cflags_cpu="-mcpu=401" ;;
       powerpc403)   gcc_cflags_cpu="-mcpu=403"
@@ -973,7 +960,8 @@ case $host in
 	    gcc_aix64_cflags="-O2 -maix64 -mpowerpc64"
 	    gcc_aix64_cflags_optlist="cpu"
 	    gcc_aix64_ldflags="-Wc,-maix64"
-	    xlc_aix64_cflags="-O2 -q64 -qtune=pwr3 -qmaxmem=20000"
+	    xlc_aix64_cflags="-O2 -q64 -qmaxmem=20000"
+	    xlc_aix64_cflags_optlist="arch"
 	    xlc_aix64_ldflags="-Wc,-q64"
 	    # Must indicate object type to ar and nm
 	    ar_aix64_flags="-X64"
@@ -1006,8 +994,10 @@ case $host in
 	    # incompatible with a shared library.
 	    #
 	    abilist="mode64 mode32 $abilist"
+	    gcc_32_cflags_maybe="-m32"
 	    gcc_cflags_opt="-O3 -O2 -O1"	# will this become used?
 	    cclist_mode32="gcc"
+	    gcc_mode32_cflags_maybe="-m32"
 	    gcc_mode32_cflags="-mpowerpc64"
 	    gcc_mode32_cflags_optlist="subtype cpu opt"
 	    gcc_mode32_cflags_subtype="-force_cpusubtype_ALL"
@@ -1021,8 +1011,8 @@ case $host in
 	    path_mode64=""
 	    for i in $cpu_path; do path_mode64="${path_mode64}powerpc64/mode64/$i "; done
 	    path_mode64="${path_mode64}powerpc64/mode64 $vmx_path powerpc64"
-            SPEED_CYCLECOUNTER_OBJ_mode64=powerpc64.lo
-            cyclecounter_size_mode64=0
+	    SPEED_CYCLECOUNTER_OBJ_mode64=powerpc64.lo
+	    cyclecounter_size_mode64=0
 	    any_mode64_testlist="sizeof-long-8"
 	    ;;
 	  *-*-linux* | *-*-*bsd*)
@@ -1031,17 +1021,19 @@ case $host in
 	    # others require -m64, hence the use of cflags_maybe.  The
 	    # sizeof-long-8 test checks the mode is right (for the no option
 	    # case).
-            #
-            # -mpowerpc64 is not used, since it should be the default in
-            # 64-bit mode.  (We need its effect for the various longlong.h
-            # asm macros to be right of course.)
-            #
-            # gcc64 was an early port of gcc to 64-bit mode, but should be
-            # obsolete before too long.  We prefer plain gcc when it knows
-            # 64-bits.
+	    #
+	    # -mpowerpc64 is not used, since it should be the default in
+	    # 64-bit mode.  (We need its effect for the various longlong.h
+	    # asm macros to be right of course.)
+	    #
+	    # gcc64 was an early port of gcc to 64-bit mode, but should be
+	    # obsolete before too long.  We prefer plain gcc when it knows
+	    # 64-bits.
 	    #
 	    abilist="mode64 mode32 $abilist"
+	    gcc_32_cflags_maybe="-m32"
 	    cclist_mode32="gcc"
+	    gcc_mode32_cflags_maybe="-m32"
 	    gcc_mode32_cflags="-mpowerpc64"
 	    gcc_mode32_cflags_optlist="cpu opt"
 	    gcc_mode32_cflags_opt="-O3 -O2 -O1"
@@ -1054,12 +1046,12 @@ case $host in
 	    path_mode64=""
 	    for i in $cpu_path; do path_mode64="${path_mode64}powerpc64/mode64/$i "; done
 	    path_mode64="${path_mode64}powerpc64/mode64 $vmx_path powerpc64"
-            SPEED_CYCLECOUNTER_OBJ_mode64=powerpc64.lo
-            cyclecounter_size_mode64=0
+	    SPEED_CYCLECOUNTER_OBJ_mode64=powerpc64.lo
+	    cyclecounter_size_mode64=0
 	    any_mode64_testlist="sizeof-long-8"
 	    ;;
-        esac
-        ;;
+	esac
+	;;
     esac
     ;;
 

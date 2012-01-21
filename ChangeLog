@@ -67,6 +67,9 @@
 	* configure.in: Split x86 CPUs into more subtypes for more accurate
 	passing of gcc flags.
 
+	* configure.in: Pass -m32 for powerpc64 with abi=32, using via _maybe
+	mechanism.
+
 2011-11-15  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/generic/powm_sec.c (mpn_local_sqr): Remove forgotten TMP_* calls.
