@@ -1,10 +1,12 @@
+2012-01-21  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Version 5.0.3 released.
+
 2012-01-18  Marc Glisse  <marc.glisse@inria.fr>
 
 	* doc/gmp.texi (mpf_class::mpf_class): Use mp_bitcnt_t.
 
 2012-01-17  Torbjorn Granlund  <tege@gmplib.org>
-
-	* Version 5.0.3 released.
 
 	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
 
@@ -99,6 +101,7 @@
 
 2011-09-25  Torbjorn Granlund  <tege@gmplib.org>
 
+	* mpn/sh: Migrate files to '.asm'.
 	* configure.in: Recognise sh3 and sh4.
 
 2011-08-18  Torbjorn Granlund  <tege@gmplib.org>
