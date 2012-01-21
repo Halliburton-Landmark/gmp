@@ -127,6 +127,8 @@
 
 2011-07-04  Torbjorn Granlund  <tege@gmplib.org>
 
+	* tests/misc/t-locale.c: Disable test for mingw.
+
 	* configure.in (x86_64 *-*-mingw*): Handle also cygwin here; clear out
 	extra_functions_64.
 
