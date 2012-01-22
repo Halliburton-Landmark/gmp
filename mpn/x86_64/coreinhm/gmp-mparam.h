@@ -130,7 +130,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define HGCD_THRESHOLD                     125
 #define GCD_DC_THRESHOLD                   330
 #define GCDEXT_DC_THRESHOLD                382
-#define JACOBI_BASE_METHOD                   4
+#define JACOBI_BASE_METHOD                   1
 
 #define GET_STR_DC_THRESHOLD                13
 #define GET_STR_PRECOMPUTE_THRESHOLD        24
