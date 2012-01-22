@@ -351,6 +351,10 @@
 
 	* mpn/generic/redc_2.c: Use asm code just for GNU C.
 
+2010-05-05  Torbjorn Granlund  <tege@gmplib.org>
+
+	* longlong.h: Undo 2009-03-01 change for powerpc64, it gives poor code.
+
 2010-04-10  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86/divrem_2.asm: Use "orb" instead of "or" to work around
