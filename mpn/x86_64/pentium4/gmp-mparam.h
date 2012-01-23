@@ -33,22 +33,22 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MOD_1N_TO_MOD_1_1_THRESHOLD          6
 #define MOD_1U_TO_MOD_1_1_THRESHOLD          5
 #define MOD_1_1_TO_MOD_1_2_THRESHOLD        10
-#define MOD_1_2_TO_MOD_1_4_THRESHOLD        34
-#define PREINV_MOD_1_TO_MOD_1_THRESHOLD     16
+#define MOD_1_2_TO_MOD_1_4_THRESHOLD        22
+#define PREINV_MOD_1_TO_MOD_1_THRESHOLD     11
 #define USE_PREINV_DIVREM_1                  1  /* native */
 #define DIVEXACT_1_THRESHOLD                 0  /* always (native) */
 #define BMOD_1_TO_MOD_1_THRESHOLD           24
 
-#define MUL_TOOM22_THRESHOLD                14
+#define MUL_TOOM22_THRESHOLD                12
 #define MUL_TOOM33_THRESHOLD                81
-#define MUL_TOOM44_THRESHOLD               214
-#define MUL_TOOM6H_THRESHOLD               286
+#define MUL_TOOM44_THRESHOLD               121
+#define MUL_TOOM6H_THRESHOLD               270
 #define MUL_TOOM8H_THRESHOLD               430
 
 #define MUL_TOOM32_TO_TOOM43_THRESHOLD      81
 #define MUL_TOOM32_TO_TOOM53_THRESHOLD     138
-#define MUL_TOOM42_TO_TOOM53_THRESHOLD      82
-#define MUL_TOOM42_TO_TOOM63_THRESHOLD      80
+#define MUL_TOOM42_TO_TOOM53_THRESHOLD     144
+#define MUL_TOOM42_TO_TOOM63_THRESHOLD      88
 
 #define SQR_BASECASE_THRESHOLD               0  /* always (native) */
 #define SQR_TOOM2_THRESHOLD                 20
@@ -190,11 +190,11 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define DC_DIV_QR_THRESHOLD                 28
 #define DC_DIVAPPR_Q_THRESHOLD              60
 #define DC_BDIV_QR_THRESHOLD                31
-#define DC_BDIV_Q_THRESHOLD                 60
+#define DC_BDIV_Q_THRESHOLD                 49
 
-#define INV_MULMOD_BNM1_THRESHOLD          141
-#define INV_NEWTON_THRESHOLD               266
-#define INV_APPR_THRESHOLD                 110
+#define INV_MULMOD_BNM1_THRESHOLD           22
+#define INV_NEWTON_THRESHOLD               226
+#define INV_APPR_THRESHOLD                 108
 
 #define BINV_NEWTON_THRESHOLD              262
 #define REDC_1_TO_REDC_2_THRESHOLD          15

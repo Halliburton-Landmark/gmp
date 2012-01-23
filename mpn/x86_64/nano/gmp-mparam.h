@@ -25,18 +25,18 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 
 #define MOD_1_NORM_THRESHOLD                 0  /* always */
 #define MOD_1_UNNORM_THRESHOLD               0  /* always */
-#define MOD_1N_TO_MOD_1_1_THRESHOLD          8
+#define MOD_1N_TO_MOD_1_1_THRESHOLD          7
 #define MOD_1U_TO_MOD_1_1_THRESHOLD          6
-#define MOD_1_1_TO_MOD_1_2_THRESHOLD        10
-#define MOD_1_2_TO_MOD_1_4_THRESHOLD        14
-#define PREINV_MOD_1_TO_MOD_1_THRESHOLD     14
+#define MOD_1_1_TO_MOD_1_2_THRESHOLD         0
+#define MOD_1_2_TO_MOD_1_4_THRESHOLD        18
+#define PREINV_MOD_1_TO_MOD_1_THRESHOLD     13
 #define USE_PREINV_DIVREM_1                  1  /* native */
 #define DIVEXACT_1_THRESHOLD                 0  /* always (native) */
 #define BMOD_1_TO_MOD_1_THRESHOLD           24
 
 #define MUL_TOOM22_THRESHOLD                28
-#define MUL_TOOM33_THRESHOLD                66
-#define MUL_TOOM44_THRESHOLD               315
+#define MUL_TOOM33_THRESHOLD                33
+#define MUL_TOOM44_THRESHOLD               292
 #define MUL_TOOM6H_THRESHOLD               746
 #define MUL_TOOM8H_THRESHOLD               866
 
@@ -177,13 +177,13 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MULLO_DC_THRESHOLD                   0  /* never mpn_mullo_basecase */
 #define MULLO_MUL_N_THRESHOLD             6633
 
-#define DC_DIV_QR_THRESHOLD                 47
-#define DC_DIVAPPR_Q_THRESHOLD             143
-#define DC_BDIV_QR_THRESHOLD                46
+#define DC_DIV_QR_THRESHOLD                 53
+#define DC_DIVAPPR_Q_THRESHOLD             151
+#define DC_BDIV_QR_THRESHOLD                38
 #define DC_BDIV_Q_THRESHOLD                 79
 
-#define INV_MULMOD_BNM1_THRESHOLD          130
-#define INV_NEWTON_THRESHOLD               163
+#define INV_MULMOD_BNM1_THRESHOLD           54
+#define INV_NEWTON_THRESHOLD               149
 #define INV_APPR_THRESHOLD                 155
 
 #define BINV_NEWTON_THRESHOLD              228
@@ -202,7 +202,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define GCDEXT_DC_THRESHOLD                469
 #define JACOBI_BASE_METHOD                   1
 
-#define GET_STR_DC_THRESHOLD                14
-#define GET_STR_PRECOMPUTE_THRESHOLD        22
-#define SET_STR_DC_THRESHOLD               378
-#define SET_STR_PRECOMPUTE_THRESHOLD      2124
+#define GET_STR_DC_THRESHOLD                11
+#define GET_STR_PRECOMPUTE_THRESHOLD        24
+#define SET_STR_DC_THRESHOLD               552
+#define SET_STR_PRECOMPUTE_THRESHOLD      1898

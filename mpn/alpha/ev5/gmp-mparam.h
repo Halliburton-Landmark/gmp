@@ -147,9 +147,9 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define DC_BDIV_QR_THRESHOLD                51
 #define DC_BDIV_Q_THRESHOLD                120
 
-#define INV_MULMOD_BNM1_THRESHOLD          100
-#define INV_NEWTON_THRESHOLD               188
-#define INV_APPR_THRESHOLD                 189
+#define INV_MULMOD_BNM1_THRESHOLD           84
+#define INV_NEWTON_THRESHOLD               174
+#define INV_APPR_THRESHOLD                 180
 
 #define BINV_NEWTON_THRESHOLD              199
 #define REDC_1_TO_REDC_N_THRESHOLD          55
@@ -160,8 +160,8 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MU_BDIV_QR_THRESHOLD               792
 #define MU_BDIV_Q_THRESHOLD                942
 
-#define MATRIX22_STRASSEN_THRESHOLD         13
-#define HGCD_THRESHOLD                     101
+#define MATRIX22_STRASSEN_THRESHOLD         15
+#define HGCD_THRESHOLD                      94
 #define GCD_DC_THRESHOLD                   306
 #define GCDEXT_DC_THRESHOLD                210
 #define JACOBI_BASE_METHOD                   2
