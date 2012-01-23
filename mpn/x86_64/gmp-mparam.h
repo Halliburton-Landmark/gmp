@@ -171,12 +171,12 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define DC_BDIV_QR_THRESHOLD                52
 #define DC_BDIV_Q_THRESHOLD                152
 
-#define INV_MULMOD_BNM1_THRESHOLD          174
+#define INV_MULMOD_BNM1_THRESHOLD           83
 #define INV_NEWTON_THRESHOLD               252
 #define INV_APPR_THRESHOLD                 250
 
 #define BINV_NEWTON_THRESHOLD              345
-#define REDC_1_TO_REDC_2_THRESHOLD          50
+#define REDC_1_TO_REDC_2_THRESHOLD           5
 #define REDC_2_TO_REDC_N_THRESHOLD          79
 
 #define MU_DIV_QR_THRESHOLD               1787
