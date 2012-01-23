@@ -1,6 +1,10 @@
-2012-01-21  Torbjorn Granlund  <tege@gmplib.org>
+2012-01-23  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.3 released.
+
+	* mpn/powerpc64/mode64/p6/gmp-mparam.h: New file.
+	* mpn/powerpc64/mode64/p7/gmp-mparam.h: New file.
+	* mpn/x86_64/bobcat/gmp-mparam.h: New file.
 
 2012-01-18  Marc Glisse  <marc.glisse@inria.fr>
 
