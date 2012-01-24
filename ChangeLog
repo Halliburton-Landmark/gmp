@@ -355,9 +355,26 @@
 
 	* mpn/generic/redc_2.c: Use asm code just for GNU C.
 
+2010-05-06  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tune/tuneup.c (tune_mod_1): Fix typo.
+
 2010-05-05  Torbjorn Granlund  <tege@gmplib.org>
 
 	* longlong.h: Undo 2009-03-01 change for powerpc64, it gives poor code.
+
+	* tune/tuneup.c (tune_mod_1): Use more typical divisor, for the benefit
+	of machines with early-out multipliers.
+
+2010-05-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tune/tuneup.c (tune_mod_1): Fix typo.
+
+2010-05-03  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tune/tuneup.c (tune_mod_1): Measure MOD_1_1_TO_MOD_1_2_THRESHOLD and
+	MOD_1_2_TO_MOD_1_4_THRESHOLD before MOD_1U_TO_MOD_1_1_THRESHOLD for
+	correctness.
 
 2010-04-10  Torbjorn Granlund  <tege@gmplib.org>
 
