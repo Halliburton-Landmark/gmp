@@ -1,6 +1,8 @@
-2012-01-23  Torbjorn Granlund  <tege@gmplib.org>
+2012-01-24  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.3 released.
+
+2012-01-23  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/powerpc64/mode64/p6/gmp-mparam.h: New file.
 	* mpn/powerpc64/mode64/p7/gmp-mparam.h: New file.
@@ -83,23 +85,78 @@
 	* mpn/generic/powm_sec.c (mpn_powm_sec): Use mpn_tabselect also in
 	initialisation.
 
+2011-10-15  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (s390): Rewrite support to handle known CPUs.
+	* config.guess: Recognise s390 CPUs.
+	* config.sub: Match s390 CPUs.
+	* acinclude.m4 (S390_PATTERN, S390X_PATTERN): New defines.
+
 2011-10-14  Torbjorn Granlund  <tege@gmplib.org>
 
 	From Per Olofsson:
 	* mpn/generic/popham.c: Add __GMP_NOTHROW to make it match gmp.h.
+
+	* configure.in: AC_DEFINE HAVE_HOST_CPU_s390_zarch.
+	* longlong.h (s390): Use it.
+	(s390 umul_ppmm): Fix typo in pure C variant.
+
+2011-10-13  Torbjorn Granlund  <tege@gmplib.org>
+
+	* longlong.h (s390): Put back an accidentally deleted #else.
+
+	* configure.in (s390): Unset extra_functions for s390x.
+
+2011-10-12  Torbjorn Granlund  <tege@gmplib.org>
+
+	* longlong.h (s390 umul_ppmm): With new-enough gcc, avoid asm.
+
+	From Andreas Krebbel:
+	* longlong.h (s390 umul_ppmm): Support 32-bit limbs with gcc using
+	64-bit registers.
+	(s390 udiv_qrnnd): Likewise.
+
+2011-10-11  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in (s390x): Pass -mzarch to gcc in 32-bit mode.
+
+	* longlong.h (s390x): Add __CLOBBER_CC for relevant asm patterns.
 
 2011-10-10  Torbjorn Granlund  <tege@gmplib.org>
 
 	From Marco Trudel:
 	* tests/mpz/t-scan.c (check_ref): Fix loop end bound.
 
+2011-10-09  Torbjorn Granlund  <tege@gmplib.org>
+
+	* longlong.h (s390x): Put back UDItype casts to make gcc reloading use
+	right more for constants.
+	(s390x count_leading_zeros): Disable until we support z10 specifically.
+	(s390x add_ssaaaa): Remove algsi/slgsi until we support z10.
+
+2011-10-07  Torbjorn Granlund  <tege@gmplib.org>
+
+	* longlong.h (s390): Add 32-bit zarch umul_ppmm and udiv_qrnnd.
+	(s390): Overhaul 32-bit and 64-bit code.
+
 2011-10-04  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/Makefile.am (TARG_DIST): Add s390_32 and s390_64, remove s390.
 
 	* doc/gmp.texi (Custom Allocation): Rephrase a paragraph.
 
 	* demos/factorize.c: Run 25 Miller-Rabin tests.
 
 	* mpz/nextprime.c: Run 25 mpz_millerrabin tests (was 10).
+
+2011-10-03  Torbjorn Granlund  <tege@gmplib.org>
+
+	* configure.in: Support s390x.
+
+	* longlong.h: Add spport for 64-bit s390x.
+
+	* mpn/s390_64: New directory.
+	* mpn/s390_32: Directory renamed from mpn/s390.
 
 2011-09-26  Torbjorn Granlund  <tege@gmplib.org>
 
