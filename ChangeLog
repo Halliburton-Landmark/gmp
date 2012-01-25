@@ -1,6 +1,8 @@
-2012-01-24  Torbjorn Granlund  <tege@gmplib.org>
+2012-01-25  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.3 released.
+
+	* tune/tuneup.c: Remove unused tuneup variables.
 
 2012-01-23  Torbjorn Granlund  <tege@gmplib.org>
 
