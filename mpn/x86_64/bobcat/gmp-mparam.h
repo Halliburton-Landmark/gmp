@@ -25,9 +25,9 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MOD_1_NORM_THRESHOLD                 0  /* always */
 #define MOD_1_UNNORM_THRESHOLD               0  /* always */
 #define MOD_1N_TO_MOD_1_1_THRESHOLD         10
-#define MOD_1U_TO_MOD_1_1_THRESHOLD          5
-#define MOD_1_1_TO_MOD_1_2_THRESHOLD         0
-#define MOD_1_2_TO_MOD_1_4_THRESHOLD       128
+#define MOD_1U_TO_MOD_1_1_THRESHOLD          4
+#define MOD_1_1_TO_MOD_1_2_THRESHOLD         6
+#define MOD_1_2_TO_MOD_1_4_THRESHOLD        80
 #define PREINV_MOD_1_TO_MOD_1_THRESHOLD     18
 #define USE_PREINV_DIVREM_1                  1  /* native */
 #define DIVEXACT_1_THRESHOLD                 0  /* always (native) */
@@ -153,8 +153,8 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define DC_BDIV_QR_THRESHOLD                44
 #define DC_BDIV_Q_THRESHOLD                 80
 
-#define INV_MULMOD_BNM1_THRESHOLD           34
-#define INV_NEWTON_THRESHOLD               197
+#define INV_MULMOD_BNM1_THRESHOLD           42
+#define INV_NEWTON_THRESHOLD               181
 #define INV_APPR_THRESHOLD                 157
 
 #define BINV_NEWTON_THRESHOLD              230
@@ -169,7 +169,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 
 #define MATRIX22_STRASSEN_THRESHOLD         14
 #define HGCD_THRESHOLD                      95
-#define GCD_DC_THRESHOLD                   400
+#define GCD_DC_THRESHOLD                   298
 #define GCDEXT_DC_THRESHOLD                283
 #define JACOBI_BASE_METHOD                   1
 

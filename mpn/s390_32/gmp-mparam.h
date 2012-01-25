@@ -88,35 +88,34 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define SQR_FFT_THRESHOLD                 2688
 
 #define MULLO_BASECASE_THRESHOLD             0  /* always */
-#define MULLO_DC_THRESHOLD                  79
+#define MULLO_DC_THRESHOLD                  54
 #define MULLO_MUL_N_THRESHOLD             6633
 
-#define DC_DIV_QR_THRESHOLD                 47
-#define DC_DIVAPPR_Q_THRESHOLD             189
-#define DC_BDIV_QR_THRESHOLD                75
-#define DC_BDIV_Q_THRESHOLD                178
+#define DC_DIV_QR_THRESHOLD                 52
+#define DC_DIVAPPR_Q_THRESHOLD             185
+#define DC_BDIV_QR_THRESHOLD                53
+#define DC_BDIV_Q_THRESHOLD                122
 
-#define INV_MULMOD_BNM1_THRESHOLD           42
-#define INV_NEWTON_THRESHOLD               303
+#define INV_MULMOD_BNM1_THRESHOLD           29
+#define INV_NEWTON_THRESHOLD               260
 #define INV_APPR_THRESHOLD                 220
 
-#define BINV_NEWTON_THRESHOLD              375
-#define REDC_1_TO_REDC_N_THRESHOLD          78
+#define BINV_NEWTON_THRESHOLD              230
+#define REDC_1_TO_REDC_N_THRESHOLD          56
 
+#define MU_DIV_QR_THRESHOLD               1142
+#define MU_DIVAPPR_Q_THRESHOLD            1234
+#define MUPI_DIV_QR_THRESHOLD              114
+#define MU_BDIV_QR_THRESHOLD               792
+#define MU_BDIV_Q_THRESHOLD               1099
 
-#define MU_DIV_QR_THRESHOLD               1360
-#define MU_DIVAPPR_Q_THRESHOLD            1499
-#define MUPI_DIV_QR_THRESHOLD              138
-#define MU_BDIV_QR_THRESHOLD              1142
-#define MU_BDIV_Q_THRESHOLD               1470
-
-#define MATRIX22_STRASSEN_THRESHOLD         18
-#define HGCD_THRESHOLD                      78
-#define GCD_DC_THRESHOLD                   351
-#define GCDEXT_DC_THRESHOLD                321
+#define MATRIX22_STRASSEN_THRESHOLD         15
+#define HGCD_THRESHOLD                     151
+#define GCD_DC_THRESHOLD                   599
+#define GCDEXT_DC_THRESHOLD                460
 #define JACOBI_BASE_METHOD                   2
 
-#define GET_STR_DC_THRESHOLD                14
-#define GET_STR_PRECOMPUTE_THRESHOLD        31
-#define SET_STR_DC_THRESHOLD               274
-#define SET_STR_PRECOMPUTE_THRESHOLD       925
+#define GET_STR_DC_THRESHOLD                15
+#define GET_STR_PRECOMPUTE_THRESHOLD        35
+#define SET_STR_DC_THRESHOLD               915
+#define SET_STR_PRECOMPUTE_THRESHOLD      1670
