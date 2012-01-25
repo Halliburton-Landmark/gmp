@@ -227,7 +227,7 @@
 
 2011-05-05  Marc Glisse  <marc.glisse@inria.fr>
 
-	[This change was made after the 5.0.2 release, but inserted here to
+	[These changes were made after the 5.0.2 release, but inserted here to
 	match the change chronology of the main repository.]
 
 	* mpn/x86_64/fat/fat.c: Update for Sandy Bridge.
@@ -321,7 +321,7 @@
 
 2011-01-31  Torbjorn Granlund  <tege@gmplib.org>
 
-	[This change was made after the 5.0.2 release, but inserted here to
+	[These changes were made after the 5.0.2 release, but inserted here to
 	match the change chronology of the main repository.]
 
 	* config.guess: Recognise new Intel processors.
@@ -341,7 +341,7 @@
 
 2010-11-10  Torbjorn Granlund  <tege@gmplib.org>
 
-	[This change was made after the 5.0.2 release, but inserted here to
+	[These changes were made after the 5.0.2 release, but inserted here to
 	match the change chronology of the main repository.]
 
 	* mp_get_fns.c: Add a __GMP_NOTHROW for coherency with prototype.
@@ -416,9 +416,15 @@
 
 2010-05-06  Torbjorn Granlund  <tege@gmplib.org>
 
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
+
 	* tune/tuneup.c (tune_mod_1): Fix typo.
 
 2010-05-05  Torbjorn Granlund  <tege@gmplib.org>
+
+	[These changes were made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
 
 	* longlong.h: Undo 2009-03-01 change for powerpc64, it gives poor code.
 
@@ -427,9 +433,15 @@
 
 2010-05-04  Torbjorn Granlund  <tege@gmplib.org>
 
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
+
 	* tune/tuneup.c (tune_mod_1): Fix typo.
 
 2010-05-03  Torbjorn Granlund  <tege@gmplib.org>
+
+	[This change was made after the 5.0.2 release, but inserted here to
+	match the change chronology of the main repository.]
 
 	* tune/tuneup.c (tune_mod_1): Measure MOD_1_1_TO_MOD_1_2_THRESHOLD and
 	MOD_1_2_TO_MOD_1_4_THRESHOLD before MOD_1U_TO_MOD_1_1_THRESHOLD for
