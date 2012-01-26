@@ -168,11 +168,11 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define SQR_FFT_TABLE3_SIZE 206
 #define SQR_FFT_THRESHOLD                 2752
 
-#define MULLO_BASECASE_THRESHOLD            10
+#define MULLO_BASECASE_THRESHOLD             5
 #define MULLO_DC_THRESHOLD                  23
 #define MULLO_MUL_N_THRESHOLD             7246
 
-#define DC_DIV_QR_THRESHOLD                 21
+#define DC_DIV_QR_THRESHOLD                 16
 #define DC_DIVAPPR_Q_THRESHOLD              64
 #define DC_BDIV_QR_THRESHOLD                62
 #define DC_BDIV_Q_THRESHOLD                156
@@ -186,7 +186,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 
 #define MU_DIV_QR_THRESHOLD               1387
 #define MU_DIVAPPR_Q_THRESHOLD            1414
-#define MUPI_DIV_QR_THRESHOLD               53
+#define MUPI_DIV_QR_THRESHOLD               31
 #define MU_BDIV_QR_THRESHOLD              1210
 #define MU_BDIV_Q_THRESHOLD               1558
 
