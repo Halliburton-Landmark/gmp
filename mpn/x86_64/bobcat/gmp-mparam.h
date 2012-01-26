@@ -27,7 +27,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MOD_1N_TO_MOD_1_1_THRESHOLD         10
 #define MOD_1U_TO_MOD_1_1_THRESHOLD          4
 #define MOD_1_1_TO_MOD_1_2_THRESHOLD         6
-#define MOD_1_2_TO_MOD_1_4_THRESHOLD        80
+#define MOD_1_2_TO_MOD_1_4_THRESHOLD        34
 #define PREINV_MOD_1_TO_MOD_1_THRESHOLD     18
 #define USE_PREINV_DIVREM_1                  1  /* native */
 #define DIVEXACT_1_THRESHOLD                 0  /* always (native) */
@@ -35,9 +35,9 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 
 #define MUL_TOOM22_THRESHOLD                16
 #define MUL_TOOM33_THRESHOLD                45
-#define MUL_TOOM44_THRESHOLD               195
-#define MUL_TOOM6H_THRESHOLD               286
-#define MUL_TOOM8H_THRESHOLD               381
+#define MUL_TOOM44_THRESHOLD               336
+#define MUL_TOOM6H_THRESHOLD               426
+#define MUL_TOOM8H_THRESHOLD               446
 
 #define MUL_TOOM32_TO_TOOM43_THRESHOLD      89
 #define MUL_TOOM32_TO_TOOM53_THRESHOLD      98
@@ -48,7 +48,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define SQR_TOOM2_THRESHOLD                 24
 #define SQR_TOOM3_THRESHOLD                 77
 #define SQR_TOOM4_THRESHOLD                354
-#define SQR_TOOM6_THRESHOLD                354
+#define SQR_TOOM6_THRESHOLD                366
 #define SQR_TOOM8_THRESHOLD                430
 
 #define MULMOD_BNM1_THRESHOLD               11
