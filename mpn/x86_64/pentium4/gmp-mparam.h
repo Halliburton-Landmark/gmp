@@ -1,7 +1,7 @@
 /* Pentium 4-64 gmp-mparam.h -- Compiler/machine parameter header file.
 
 Copyright 1991, 1993, 1994, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
-2008, 2009 Free Software Foundation, Inc.
+2008, 2009, 2012 Free Software Foundation, Inc.
 
 This file is part of the GNU MP Library.
 
@@ -197,7 +197,7 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define INV_APPR_THRESHOLD                 108
 
 #define BINV_NEWTON_THRESHOLD              262
-#define REDC_1_TO_REDC_2_THRESHOLD          44
+#define REDC_1_TO_REDC_2_THRESHOLD          11
 #define REDC_2_TO_REDC_N_THRESHOLD          44
 
 #define MU_DIV_QR_THRESHOLD                979
