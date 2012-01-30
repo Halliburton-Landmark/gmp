@@ -1,6 +1,12 @@
+2012-01-30  Torbjorn Granlund  <tege@gmplib.org>
+
+	* tests/mpz/t-powm.c: Ensure all sizes are seen.
+
 2012-01-27  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.3 released.
+
+	* Upgrade to libtool 2.4.2.
 
 2012-01-25  Torbjorn Granlund  <tege@gmplib.org>
 
