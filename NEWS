@@ -5,6 +5,34 @@ Verbatim copying and distribution of this entire article is permitted in any
 medium, provided this notice is preserved.
 
 
+Changes between GMP version 5.0.3 and 5.0.4
+
+  BUGS FIXED
+  * Thresholds in powm_sec for a non-fat build are now used safely, plugging a
+    one-word buffer overrun introduced in the 5.0.3 release.  (We have not been
+    able to provoke malign stack smashing in any of the ~100 configurations
+    explored by the GMP nightly builds.
+
+  * Thresholds in powm_sec for a fat build are now used safely, plugging a
+    potential multi-word buffer overrun.  (The bug is not fully analysed; we
+    have not been able to provoke malign stack smashing in any of the ~100
+    configurations explored by the GMP nightly builds.)
+
+  * A bug in multiplication code causing incorrect computation with extremely
+    low probability in 32-bits builds was fixed.
+
+  SPEEDUPS
+  * None.
+
+  FEATURES
+  * Some more tests added to the self-check suite.
+
+  * The AMD "Bulldozer" CPU is now recognised.
+
+  MISC
+  * None.
+
+
 Changes between GMP version 5.0.2 and 5.0.3
 
   BUGS FIXED
