@@ -1,5 +1,9 @@
 2012-02-03  Torbjorn Granlund  <tege@gmplib.org>
 
+	* Version 5.0.4 released.
+
+	* mpn/x86_64/bd1/gmp-mparam.h: New file.
+
 	* longlong.h (udiv_qrnnd from sdiv_qrnnd): Declare udiv_w_sdiv.
 
 	* mpn/generic/udiv_w_sdiv.c: Use c89 function header.
