@@ -1,6 +1,8 @@
-2012-02-03  Torbjorn Granlund  <tege@gmplib.org>
+2012-02-04 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
-	* Version 5.0.4 released.
+	* tests/refmpn.c (refmpn_mul): More conservative allocations.
+
+2012-02-03  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/x86_64/bd1/gmp-mparam.h: New file.
 
