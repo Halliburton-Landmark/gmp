@@ -115,6 +115,21 @@ main (int argc, char **argv)
       if (mpz_size (op1) > 0)
 	one_test (op1, op2, i);
 
+      /* And with rrandomb */
+      mpz_urandomb (bs, rands, 32);
+      size_range = mpz_get_ui (bs) % 13 + 2;
+
+      mpz_urandomb (bs, rands, size_range);
+      mpz_rrandomb (op1, rands, mpz_get_ui (bs) + MIN_OPERAND_SIZE);
+      mpz_urandomb (bs, rands, size_range);
+      mpz_rrandomb (op2, rands, mpz_get_ui (bs) + MIN_OPERAND_SIZE);
+
+      if (mpz_cmp (op1, op2) < 0)
+	mpz_swap (op1, op2);
+
+      if (mpz_size (op1) > 0)
+	one_test (op1, op2, i);
+      
       /* Generate a division chain backwards, allowing otherwise
 	 unlikely huge quotients.  */
 

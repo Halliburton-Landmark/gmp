@@ -1,5 +1,8 @@
 2012-02-05  Niels Möller  <nisse@lysator.liu.se>
 
+	* tests/mpz/t-gcd.c (main): Add tests with rrandomb operands.
+	* tests/mpn/t-hgcd.c (main): Likewise.
+
 	* mpn/generic/gcdext_subdiv_step.c (mpn_gcdext_subdiv_step):
 	Bugfix, in u1 += q * u0, handle carry in all cases. Also normalize
 	the product q * u0.
