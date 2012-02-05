@@ -1,3 +1,8 @@
+2012-02-05  Niels Möller  <nisse@lysator.liu.se>
+
+	* mpn/generic/gcdext_subdiv_step.c (mpn_gcdext_subdiv_step):
+	Bugfix, in u1 += q * u0, handle carry in all cases.
+
 2012-02-04 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* tests/refmpn.c (refmpn_mul): More conservative allocations.
