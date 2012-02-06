@@ -154,30 +154,6 @@ main (int argc, char **argv)
       size_range = mpz_get_ui (bs) % 17 + 2;
 
       mpz_urandomb (bs, rands, size_range);
-      mpz_urandomb (op1, rands, mpz_get_ui (bs) + MIN_OPERAND_BITSIZE);
-      mpz_urandomb (bs, rands, size_range);
-      mpz_urandomb (op2, rands, mpz_get_ui (bs) + MIN_OPERAND_BITSIZE);
-
-      mpz_urandomb (bs, rands, 8);
-      bsi = mpz_get_ui (bs);
-
-      if ((bsi & 0x3c) == 4)
-	mpz_mul (op1, op1, op2);	/* make op1 a multiple of op2 */
-      else if ((bsi & 0x3c) == 8)
-	mpz_mul (op2, op1, op2);	/* make op2 a multiple of op1 */
-
-      if ((bsi & 1) != 0)
-	mpz_neg (op1, op1);
-      if ((bsi & 2) != 0)
-	mpz_neg (op2, op2);
-
-      one_test (op1, op2, NULL, i);
-
-      /* And rrandomb inputs have triggered other bugs. */
-      mpz_urandomb (bs, rands, 32);
-      size_range = mpz_get_ui (bs) % 17 + 2;
-
-      mpz_urandomb (bs, rands, size_range);
       mpz_rrandomb (op1, rands, mpz_get_ui (bs) + MIN_OPERAND_BITSIZE);
       mpz_urandomb (bs, rands, size_range);
       mpz_rrandomb (op2, rands, mpz_get_ui (bs) + MIN_OPERAND_BITSIZE);

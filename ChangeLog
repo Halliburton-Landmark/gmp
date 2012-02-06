@@ -1,3 +1,8 @@
+2012-02-06  Niels Möller  <nisse@lysator.liu.se>
+
+	* tests/mpz/t-gcd.c (main): Omit tests with urandomb operands.
+	* tests/mpn/t-hgcd.c (main): Likewise.
+
 2012-02-05  Niels Möller  <nisse@lysator.liu.se>
 
 	* tests/mpz/t-gcd.c (main): Add tests with rrandomb operands.
