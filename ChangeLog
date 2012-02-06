@@ -1,5 +1,8 @@
 2012-02-06  Niels Möller  <nisse@lysator.liu.se>
 
+	* mpn/generic/hgcd.c (hgcd_matrix_update_q): Fixed carry handling
+	bug.
+
 	* tests/mpz/t-gcd.c (main): Omit tests with urandomb operands.
 	* tests/mpn/t-hgcd.c (main): Likewise.
 
