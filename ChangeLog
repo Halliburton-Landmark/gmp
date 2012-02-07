@@ -1,3 +1,8 @@
+2012-02-07  Niels Möller  <nisse@lysator.liu.se>
+
+	* mpn/generic/gcdext.c (mpn_gcdext): Fixed assert, related to the
+	special case A = (2k+1) G, B = 2 G.
+
 2012-02-06  Niels Möller  <nisse@lysator.liu.se>
 
 	* mpn/generic/hgcd.c (hgcd_matrix_update_q): Fixed carry handling
