@@ -183,7 +183,7 @@ mpn_gcdext_subdiv_step (mp_ptr gp, mp_size_t *gn, mp_ptr up, mp_size_t *usizep,
 	{
 	  mp_size_t u1n = un;
 	  un = qn + u0n;
-	  un -= (tp[un-1] == 0);	  
+	  un -= (tp[un-1] == 0);
 	  u1[un] = mpn_add (u1, tp, un, u1, u1n);
 	}
       else

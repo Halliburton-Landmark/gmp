@@ -114,7 +114,7 @@ main (int argc, char **argv)
 
       if (mpz_size (op1) > 0)
 	one_test (op1, op2, i);
-      
+
       /* Generate a division chain backwards, allowing otherwise
 	 unlikely huge quotients.  */
 

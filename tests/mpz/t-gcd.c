@@ -172,7 +172,7 @@ main (int argc, char **argv)
 	mpz_neg (op2, op2);
 
       one_test (op1, op2, NULL, i);
-	 
+
       /* Generate a division chain backwards, allowing otherwise unlikely huge
 	 quotients.  */
 
