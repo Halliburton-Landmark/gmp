@@ -1,3 +1,8 @@
+2012-02-08  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpn/powerpc32/divrem_2.asm: Fix of-by-one condition in invert_limb
+	code.
+
 2012-02-08  Niels Möller  <nisse@lysator.liu.se>
 
 	* doc/gmp.texi (mpz_gcdext): Describe cofactor canonicalization.
