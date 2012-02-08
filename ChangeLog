@@ -1,6 +1,7 @@
 2012-02-08  Niels Möller  <nisse@lysator.liu.se>
 
 	* doc/gmp.texi (mpz_gcdext): Describe cofactor canonicalization.
+	(mpn_gcdext): Copied doc updates from main repo.
 
 2012-02-07  Niels Möller  <nisse@lysator.liu.se>
 
