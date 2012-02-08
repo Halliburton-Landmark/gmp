@@ -9,28 +9,25 @@ Changes between GMP version 5.0.3 and 5.0.4
 
   BUGS FIXED
 
-  * Thresholds in powm_sec for non-fat builds are now used safely, plugging a
-    one-word buffer overrun introduced in the 5.0.3 release.  (We have not been
-    able to provoke malign stack smashing in any of the ~100 configurations
-    explored by the GMP nightly builds, but the bug should be assumed to be
+  * Thresholds in powm_sec for both fat and non-fat builds are now
+    used safely, plugging a one-word buffer overrun introduced in the
+    5.0.3 release (for non-fat) and a multi-word buffer overrun that
+    existed since 5.0 (for fat).  (We have not been able to provoke
+    malign stack smashing in any of the ~100 configurations explored
+    by the GMP nightly builds, but the bug should be assumed to be
     exploitable.)
 
-  * Thresholds in powm_sec for fat builds are now used safely, plugging a
-    potential multi-word buffer overrun.  (The bug is not fully analysed; we
-    have not been able to provoke malign stack smashing in any of the ~100
-    configurations explored by the GMP nightly builds, but the bug should be
-    assumed to be exploitable.)
-
-  * A bug in multiplication code causing incorrect computation with extremely
-    low probability in 32-bits builds was fixed.
+  * Two bugs in multiplication code causing incorrect computation with
+    extremely low probability builds was fixed.
 
   * A bug in the test suite causing buffer overruns during "make check",
     sometimes leading to subsequent malloc crashes, has been fixed.
 
-  * Two bugs in the gcd code have been fixed.  One bug could lead to
+  * Two bugs in the gcd code have been fixed.  They could lead to
     incorrect results, but for uniformly distributed random operands,
-    the likelihood was infinitesimally small.  The other bug was
-    merely an incorrect ASSERT.
+    the likelihood for that is infinitesimally small.  (There was also
+    a third bug, but that was an incorrect ASSERT, which furthermore
+    was not enabled by default.)
 
   SPEEDUPS
   * None, except indirectly through recognition of new CPUs, and through better
