@@ -1,3 +1,7 @@
+2012-02-09  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Version 5.0.4 released.
+
 2012-02-08  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/powerpc32/divrem_2.asm: Fix off-by-one condition in invert_limb
