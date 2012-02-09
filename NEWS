@@ -18,7 +18,7 @@ Changes between GMP version 5.0.3 and 5.0.4
     exploitable.)
 
   * Two bugs in multiplication code causing incorrect computation with
-    extremely low probability was fixed.
+    extremely low probability have been fixed.
 
   * A bug in the test suite causing buffer overruns during "make check",
     sometimes leading to subsequent malloc crashes, has been fixed.
