@@ -2,6 +2,11 @@
 
 	* Version 5.0.4 released.
 
+	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
+
+	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
+	Bump version info.
+
 2012-02-08  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/powerpc32/divrem_2.asm: Fix off-by-one condition in invert_limb
