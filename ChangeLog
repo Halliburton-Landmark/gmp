@@ -1,6 +1,6 @@
 2012-02-08  Torbjorn Granlund  <tege@gmplib.org>
 
-	* mpn/powerpc32/divrem_2.asm: Fix of-by-one condition in invert_limb
+	* mpn/powerpc32/divrem_2.asm: Fix off-by-one condition in invert_limb
 	code.
 
 2012-02-08  Niels Möller  <nisse@lysator.liu.se>
@@ -63,7 +63,7 @@
 
 	* mpn/generic/powm_sec.c (SQR_BASECASE_LIM): New name for
 	SQR_BASECASE_MAX.
-	(SQR_BASECASE_LIM, fat varint): Define to read __gmpn_cpuvec.
+	(SQR_BASECASE_LIM, fat variant): Define to read __gmpn_cpuvec.
 	(SQR_BASECASE_LIM, native variant): Define to SQR_TOOM2_THRESHOLD
 	straight, without arithmetic.
 	(mpn_local_sqr): Use BELOW_THRESHOLD as per Marco's suggestion.
@@ -233,7 +233,7 @@
 
 	* configure.in: Support s390x.
 
-	* longlong.h: Add spport for 64-bit s390x.
+	* longlong.h: Add support for 64-bit s390x.
 
 	* mpn/s390_64: New directory.
 	* mpn/s390_32: Directory renamed from mpn/s390.
