@@ -1,3 +1,8 @@
+2012-02-09 Marco Bodrato <bodrato@mail.dm.unipi.it>
+
+	* gmp-impl.h (mpn_toom3*_itch): Support any recursion depth.
+	* tests/refmpn.c (refmpn_mul): Restore tight allocations.
+
 2012-02-09  Marc Glisse  <marc.glisse@inria.fr>
 
 	* gmp-impl.h (ABS_CAST): New macro.
