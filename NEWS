@@ -27,8 +27,8 @@ Changes between GMP version 5.0.3 and 5.0.4
     an incorrect ASSERT, which furthermore was not enabled by default.)
 
   * A bug affecting 32-bit PowerPC division has been fixed.  The bug caused
-    miscomputation for certain divisors in the range 2^32 ... 2^64-1 (probably
-    about 1 in 2^30 of these).
+    miscomputation for certain divisors in the range 2^32 ... 2^64-1 (about 1
+    in 2^30 of these).
 
   SPEEDUPS
   * None, except indirectly through recognition of new CPUs, and through better
