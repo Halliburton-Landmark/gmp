@@ -4,7 +4,8 @@
    BE SUBJECT TO INCOMPATIBLE CHANGES IN FUTURE GNU MP RELEASES.
 
 Copyright 1991, 1993, 1994, 1995, 1996, 1997, 1999, 2000, 2001, 2002, 2003,
-2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation,
+Inc.
 
 This file is part of the GNU MP Library.
 
@@ -478,6 +479,7 @@ __GMP_DECLSPEC void  __gmp_tmp_debug_free  __GMP_PROTO ((const char *, int, int,
 #define UNLIKELY(cond)                 __GMP_UNLIKELY(cond)
 
 #define ABS(x) ((x) >= 0 ? (x) : -(x))
+#define ABS_CAST(T,x) ((x) >= 0 ? (T)(x) : -((T)((x) + 1) - 1))
 #undef MIN
 #define MIN(l,o) ((l) < (o) ? (l) : (o))
 #undef MAX

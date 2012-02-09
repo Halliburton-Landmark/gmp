@@ -1,6 +1,18 @@
-2012-02-09  Torbjorn Granlund  <tege@gmplib.org>
+2012-02-09  Marc Glisse  <marc.glisse@inria.fr>
 
-	* Version 5.0.4 released.
+	* gmp-impl.h (ABS_CAST): New macro.
+	* mpf/cmp_si.c: Use ABS_CAST.
+	* mpf/get_si.c: Use ABS_CAST.
+	* mpf/iset_si.c: Use ABS_CAST.
+	* mpf/set_si.c: Use ABS_CAST.
+	* mpq/set_si.c: Use ABS_CAST.
+	* mpz/cmp_si.c: Use ABS_CAST.
+	* mpz/get_si.c: Use ABS_CAST.
+	* mpz/iset_si.c: Use ABS_CAST.
+	* mpz/mul_i.h: Use ABS_CAST.
+	* mpz/set_si.c: Use ABS_CAST.
+
+2012-02-09  Torbjorn Granlund  <tege@gmplib.org>
 
 	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
 
