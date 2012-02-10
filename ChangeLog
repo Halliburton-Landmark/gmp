@@ -1,3 +1,7 @@
+2012-02-10  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Version 5.0.4 released.
+
 2012-02-09 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* gmp-impl.h (mpn_toom3*_itch): Support any recursion depth.
