@@ -8,6 +8,10 @@
 	* tests/mpz/t-invert.c: New file.
 	* tests/mpz/Makefile.am (check_PROGRAMS): Add t-invert.
 
+2012-02-11 Marco Bodrato <bodrato@mail.dm.unipi.it>
+
+	* doc/gmp.texi (Multiplication Algorithms): Add Toom[68]'n'half.
+
 2012-02-10  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.4 released.
