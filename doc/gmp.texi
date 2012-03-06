@@ -15,7 +15,7 @@ This manual describes how to install and use the GNU multiple precision
 arithmetic library, version @value{VERSION}.
 
 Copyright 1991, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
-2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 Free Software
+2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software
 Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document under
@@ -3610,8 +3610,9 @@ Set @var{rop} to the least common multiple of @var{op1} and @var{op2}.
 @cindex Inverse modulo functions
 Compute the inverse of @var{op1} modulo @var{op2} and put the result in
 @var{rop}.  If the inverse exists, the return value is non-zero and @var{rop}
-will satisfy @math{0 @le{} @var{rop} < @var{op2}}.  If an inverse doesn't exist
-the return value is zero and @var{rop} is undefined.
+will satisfy @math{0 < @var{rop} < @GMPabs{@var{op2}}}.  If an inverse doesn't
+exist the return value is zero and @var{rop} is undefined.  The behaviour of
+this function is undefined when @var{op2} is zero.
 @end deftypefun
 
 @deftypefun int mpz_jacobi (mpz_t @var{a}, mpz_t @var{b})
