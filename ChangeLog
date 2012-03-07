@@ -1,3 +1,7 @@
+2012-03-07  Torbjorn Granlund  <tege@gmplib.org>
+
+	* config.guess: Handle AMD 11h correctly.
+
 2012-03-04 Marco Bodrato <bodrato@mail.dm.unipi.it>
 
 	* tests/mpz/t-invert.c: Avoid testing mod 0.
