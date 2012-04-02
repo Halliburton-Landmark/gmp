@@ -1,6 +1,6 @@
 2012-04-02  Torbjorn Granlund  <tege@gmplib.org>
 
-	* Version 5.0.4 released.
+	* Version 5.0.5 released.
 
 	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
 
