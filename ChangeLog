@@ -1,5 +1,12 @@
 2012-04-02  Torbjorn Granlund  <tege@gmplib.org>
 
+	* Version 5.0.4 released.
+
+	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
+
+	* Makefile.am (LIBGMP_LT_*, LIBGMPXX_LT_*, LIBMP_LT_*):
+	Bump version info.
+
 	* gmp-h.in (_GMP_H_HAVE_FILE): Test also __STDIO_LOADED (for VMS).
 
 2012-03-27  Torbjorn Granlund  <tege@gmplib.org>

@@ -5,6 +5,27 @@ Verbatim copying and distribution of this entire article is permitted in any
 medium, provided this notice is preserved.
 
 
+Changes between GMP version 5.0.4 and 5.0.5
+
+  BUGS FIXED
+  * A bug causing AMD 11h processors to be treated like AMD 10h has been fixed.
+    The 11h processors do not correctly handle all 10h (aka K10) instructions,
+    and GMP's use of these instructions results in major miscomputations (not
+    as one would have hoped CPU traps of some 'illegal instruction' sort).
+
+  * A bug affecting recent Intel Sandy Bridge CPUs resulting in configuration
+    failures has been fixed,
+
+  SPEEDUPS
+  * None.
+
+  FEATURES
+  * None.
+
+  MISC
+  * None.
+
+
 Changes between GMP version 5.0.3 and 5.0.4
 
   BUGS FIXED
