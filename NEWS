@@ -20,7 +20,7 @@ Changes between GMP version 5.0.4 and 5.0.5
   * None.
 
   FEATURES
-  * None.
+  * A couple of tests added to the self-check suite.
 
   MISC
   * None.
