@@ -1,3 +1,7 @@
+2012-05-06  Torbjorn Granlund  <tege@gmplib.org>
+
+	* Version 5.0.5 released.
+
 2012-04-28  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/thumb/add_n.s: Remove broken code.
