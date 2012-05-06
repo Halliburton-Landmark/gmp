@@ -1,6 +1,9 @@
-2012-04-02  Torbjorn Granlund  <tege@gmplib.org>
+2012-04-28  Torbjorn Granlund  <tege@gmplib.org>
 
-	* Version 5.0.5 released.
+	* mpn/thumb/add_n.s: Remove broken code.
+	* mpn/thumb/sub_n.s: Likewise.
+
+2012-04-02  Torbjorn Granlund  <tege@gmplib.org>
 
 	* gmp-h.in (__GNU_MP_VERSION_PATCHLEVEL): Bump.
 
