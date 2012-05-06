@@ -2,6 +2,8 @@
 
 	* Version 5.0.5 released.
 
+	* mpn/Makefile.am (TARG_DIST): Remove thumb, since directory now empty.
+
 2012-04-28  Torbjorn Granlund  <tege@gmplib.org>
 
 	* mpn/thumb/add_n.s: Remove broken code.
