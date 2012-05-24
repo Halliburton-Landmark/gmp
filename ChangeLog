@@ -1,3 +1,17 @@
+2012-05-24  Torbjorn Granlund  <tege@gmplib.org>
+
+	* mpz/n_pow_ui.c: Cast non-limb count_leading_zeros argument.
+
+2012-05-24 Marco Bodrato <bodrato@mail.dm.unipi.it>
+
+	* mpz/remove.c: Support negative divisor.
+	* tests/mpz/t-remove.c: Test negative divisor.
+
+2012-05-17 Marco Bodrato <bodrato@mail.dm.unipi.it>
+
+	* mpz/rootrem.c: Correctly handle odd roots of negatives.
+	* tests/mpz/t-root.c: Test it.
+
 2012-05-06  Torbjorn Granlund  <tege@gmplib.org>
 
 	* Version 5.0.5 released.

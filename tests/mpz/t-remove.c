@@ -73,6 +73,8 @@ main (int argc, char **argv)
 
       mpz_urandomb (bs, rands, 32);
       exp = mpz_get_ui (bs) % (5 + 10000 / mpz_sizeinbase (divisor, 2));
+      if (mpz_get_ui (bs) & 2)
+	mpz_neg (divisor, divisor);
       mpz_pow_ui (t, divisor, exp);
       mpz_mul (dividend, dividend, t);
 
